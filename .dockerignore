@@ -3,6 +3,7 @@
 .env
 data
 tests
+docs
 __pycache__
 .pytest_cache
 frontend
