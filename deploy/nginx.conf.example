@@ -1,0 +1,28 @@
+# Install on the Linux host as /etc/nginx/sites-available/blog.
+# Replace blog.example.com, then configure HTTPS before public login.
+limit_req_zone $binary_remote_addr zone=blog_api:10m rate=10r/s;
+limit_req_zone $binary_remote_addr zone=blog_login:10m rate=2r/m;
+
+server {
+    listen 80;
+    server_name blog.example.com;
+    client_max_body_size 6m;
+    limit_req_status 429;
+
+    location = /api/v1/auth/login {
+        limit_req zone=blog_login burst=5 nodelay;
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+    }
+
+    location /api/ {
+        limit_req zone=blog_api burst=30 nodelay;
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+    }
+    # Fonts and scripts arrive in parallel; API rate limits must not throttle them.
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_set_header Host $host;
+    }
+}

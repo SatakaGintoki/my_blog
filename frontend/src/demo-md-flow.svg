@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240">
+  <rect width="720" height="240" fill="#fdfdfc"/>
+  <defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8" fill="none" stroke="#55778e" stroke-width="1.2"/></marker></defs>
+  <g fill="#eef2f5" stroke="#dce2e7"><rect x="34" y="85" width="160" height="70" rx="4"/><rect x="488" y="26" width="198" height="70" rx="4"/><rect x="488" y="144" width="198" height="70" rx="4"/></g>
+  <g stroke="#55778e" stroke-width="1.5" fill="none" marker-end="url(#arrow)"><path d="M194 120H350V61H478"/><path d="M350 120V179H478"/></g>
+  <g fill="#24262a" font-family="Consolas,monospace" font-size="20" text-anchor="middle"><text x="114" y="117">loading</text><text x="587" y="58">success</text><text x="587" y="176">error</text></g>
+  <g fill="#74787f" font-family="sans-serif" font-size="12" text-anchor="middle"><text x="114" y="138">request in progress</text><text x="587" y="79">render the result</text><text x="587" y="197">show a retry action</text><text x="381" y="50">resolved</text><text x="381" y="168">rejected</text></g>
+</svg>

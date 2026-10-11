@@ -1,0 +1,125 @@
+/* The editor shares the public journal's tokens; solid work surfaces keep dots
+   out of text fields while the surrounding page retains the paper texture. */
+.admin-app, .login-page { color: var(--text); }
+.login-nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.login-card { border-radius: 0; border: 0; border-top: 3px solid var(--heading); border-bottom: 1px solid var(--line); margin-top: 70px; }
+.login-visual { background: var(--bg); border-right: 1px solid var(--line); min-height: 510px; padding: 42px; }
+.login-visual .eyebrow { font-size: 10px; letter-spacing: .8px; }
+.login-masthead { display: block; margin: 22px 0 34px; font-size: clamp(30px, 3.2vw, 46px); line-height: 1.15; letter-spacing: -1.6px; font-weight: 750; color: var(--heading); text-transform: uppercase; overflow-wrap: anywhere; }
+.login-visual h2 { font-family: var(--editorial-serif); font-weight: 400; color: var(--accent); font-size: 29px; }
+.login-visual p { font-size: 13px; line-height: 1.9; }
+.login-visual > small { position: static; display: block; font: 10px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .5px; color: var(--muted); }
+.login-plate { margin: 27px 0 22px; padding: 22px; background: repeating-linear-gradient(-45deg, transparent 0, transparent 20px, var(--panel) 20px, var(--panel) 22px), var(--accent-soft); color: var(--accent); }
+.login-plate span { font: 600 17px/1.25 ui-monospace, Consolas, monospace; letter-spacing: .4px; }
+.login-form-wrap { padding: 66px 45px 45px; }
+.login-form-wrap h1 { font-size: 30px; color: var(--heading); margin: 14px 0 12px; font-weight: 650; }
+.login-form-wrap > .eyebrow { font-size: 10px; letter-spacing: .8px; }
+.login-form-wrap > p { font-size: 13px; }
+.login-hint { font-size: 11px; }
+.admin-sidebar { width: 224px; padding: 32px 24px; background: var(--bg); }
+.admin-sidebar .admin-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; letter-spacing: 0; }
+.admin-brand strong { font-size: 26px; font-weight: 750; letter-spacing: -1px; line-height: 1.15; text-transform: uppercase; color: var(--heading); overflow-wrap: anywhere; max-width: 100%; }
+.admin-brand > span { font-size: 10px; font-weight: 400; letter-spacing: .5px; color: var(--muted); }
+.admin-sidebar .sidebar-label { margin: 40px 0 16px; font: 9px/1.6 ui-monospace, Consolas, monospace; letter-spacing: .4px; }
+.admin-sidebar nav { gap: 2px; }
+.admin-sidebar nav a { border-radius: 0; padding: 12px 13px; border-left: 2px solid transparent; font-size: 13px; }
+.admin-sidebar nav a.active { border-left-color: var(--accent); background: var(--accent-soft); }
+.admin-sidebar nav a svg { width: 16px; height: 16px; }
+.admin-sidebar-bottom .text-link { font-size: 12px; padding-left: 0; font-weight: 400; }
+.admin-topbar { height: 76px; background: var(--bg); }
+.admin-topbar > span { color: var(--text); }
+.admin-topbar > span small { color: var(--muted); font: 10px/1.5 ui-monospace, Consolas, monospace; margin-left: 8px; letter-spacing: .4px; }
+.admin-account { color: var(--muted); }
+.admin-content { max-width: 1280px; padding: 40px 44px 64px; }
+.admin-heading { border-bottom: 3px solid var(--heading); padding-bottom: 26px; margin-bottom: 30px; align-items: flex-end; }
+.admin-heading h1 { color: var(--heading); font-size: 34px; font-weight: 650; letter-spacing: -1px; margin: 12px 0; overflow-wrap: anywhere; }
+.admin-heading .eyebrow { font: 10px/1.7 ui-monospace, Consolas, monospace; letter-spacing: .5px; }
+.admin-heading p { font-size: 13px; }
+.stat-grid { gap: 0; border-bottom: 1px solid var(--line); }
+.stat-card { background: transparent; border: 0; border-right: 1px solid var(--line); border-radius: 0; padding: 8px 28px 28px; }
+.stat-card:first-child { padding-left: 0; }
+.stat-card:last-child { border-right: 0; }
+.stat-card:hover { background: var(--accent-soft); border-color: var(--line); }
+.stat-card > strong { color: var(--accent); font-size: 48px; font-weight: 350; font-variant-numeric: tabular-nums; }
+.stat-card .text-link { font-size: 11px; font-weight: 400; }
+.admin-app .panel { border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 25px 24px; }
+.admin-app .panel-heading h2 { color: var(--heading); font-weight: 600; }
+.dashboard-post h3 { font-size: 15px; color: var(--heading); font-weight: 600; }
+.dashboard-post span:not(.status-badge) { font-size: 11px; }
+.writing-tip { background: transparent; border-top: 1px solid var(--line); border-radius: 0; padding: 22px 0; color: var(--accent); }
+.writing-tip strong { color: var(--heading); }
+.writing-tip p { font-size: 12px; }
+.admin-app .category-tabs { gap: 24px; }
+.admin-app .category-tabs button { border-radius: 0; padding: 6px 0 9px; background: transparent; border: 0; color: var(--muted); }
+.admin-app .category-tabs button.selected { color: var(--heading); box-shadow: inset 0 -1px var(--accent); }
+.admin-app .category-tabs button:hover { color: var(--accent); }
+.inline-search { border-radius: 3px; }
+.post-table th { font-size: 11px; }
+.table-title { color: var(--heading); font-size: 14px; }
+.table-date, .post-table td small { font-size: 11px; }
+.status-badge { border-radius: 2px; }
+.editor-toolbar { border-radius: 3px 3px 0 0; box-shadow: none; }
+.editor-modes button { border-radius: 2px; }
+.markdown-source { background: var(--panel); }
+.markdown-preview { background: var(--bg); }
+.title-input { color: var(--heading); font-family: var(--editorial-serif); font-size: 27px; font-weight: 400; }
+.editor-help { border-top: 1px solid var(--line); margin-top: 24px; padding: 22px 0; }
+.editor-bottom, .save-state { font-size: 11px; }
+.tag-picker label, .count-pill { border-radius: 2px; }
+.moderation-heading strong, .taxonomy-row strong { color: var(--heading); font-size: 14px; }
+.moderation-heading small, .taxonomy-row small { font-size: 11px; }
+.moderation-item > p { font-size: 14px; }
+.profile-preview-name { padding-bottom: 17px; border-bottom: 3px solid var(--heading); }
+.profile-preview-name h3 { color: var(--heading); font-size: 32px; letter-spacing: -.8px; font-weight: 750; text-transform: uppercase; }
+@media (prefers-reduced-motion: no-preference) {
+  .login-card, .admin-heading { animation: workspace-arrive .6s var(--motion-ease) both; }
+}
+@keyframes workspace-arrive { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@media (max-width: 1200px) {
+  .admin-content { padding-inline: 28px; }
+  .admin-sidebar { width: 200px; padding-inline: 20px; }
+  .admin-brand strong { font-size: 24px; }
+}
+@media (max-width: 980px) {
+  .admin-sidebar { width: 180px; padding-inline: 16px; }
+  .admin-brand strong { font-size: 21px; }
+  .admin-heading h1 { font-size: 29px; }
+  .login-visual { padding: 32px; }
+  .stat-card { padding-inline: 20px; }
+}
+@media (max-width: 760px) {
+  .login-card { margin-top: 35px; }
+  .login-visual { min-height: 0; padding: 28px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .login-masthead { margin: 18px 0 20px; font-size: 36px; }
+  .login-visual h2 { font-size: 27px; margin: 0; }
+  .login-plate { display: none; }
+  .login-visual > small { display: none; }
+  .login-form-wrap { padding: 30px 28px; }
+  .admin-sidebar { width: 100%; padding: 22px 20px 0; }
+  .admin-sidebar .admin-brand { gap: 7px; }
+  .admin-brand strong { font-size: 26px; }
+  .admin-sidebar .sidebar-label { display: none; }
+  .admin-sidebar nav { padding-top: 10px; gap: 13px; }
+  .admin-sidebar nav a { font-size: 11px; padding: 10px 0; border-left: 0; border-bottom: 2px solid transparent; }
+  .admin-sidebar nav a.active { background: transparent; border-bottom-color: var(--accent); }
+  .admin-sidebar-bottom .text-link { font-size: 10px; }
+  .admin-topbar { height: 55px; }
+  .admin-topbar > span small { display: none; }
+  .admin-content { padding: 28px 20px 45px; }
+  .admin-heading { padding-bottom: 22px; }
+  .admin-heading h1 { font-size: 28px; }
+  .admin-heading .eyebrow { font-size: 9px; }
+  .admin-app .panel { padding: 22px 20px; }
+  .stat-card { padding: 6px 15px 20px; }
+  .stat-card > strong { font-size: 35px; }
+  .editor-bottom, .save-state { font-size: 10px; }
+  .title-input { font-size: 25px; }
+}
+@media (max-width: 440px) {
+  .admin-sidebar nav { gap: 9px; }
+  .admin-content { padding-inline: 16px; }
+  .stat-card { border-right: 0; border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .stat-card:last-child { border-bottom: 0; }
+  .stat-card > strong { font-size: 32px; }
+  .admin-app .panel { padding-inline: 16px; }
+}

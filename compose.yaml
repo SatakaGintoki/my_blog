@@ -1,0 +1,31 @@
+services:
+  web:
+    build: ./frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      blog:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+  blog:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/blog.db
+      UPLOAD_DIR: /app/data/uploads
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - blog_data:/app/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp
+volumes:
+  blog_data:
